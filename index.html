@@ -62,18 +62,29 @@
 
     <!-- Load section content dynamically -->
     <script>
-        function loadSection(filename) {
+        function loadSection(filename, anchor = '') {
             fetch(filename)
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById("dynamic-content").innerHTML = html;
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // Wait for DOM update
+                    setTimeout(() => {
+                        if (anchor) {
+                            const el = document.querySelector(anchor);
+                            if (el) {
+                                el.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 100); // slight delay to ensure DOM is ready
                 })
                 .catch(error => console.error('Error loading section:', error));
         }
 
         // Load welcome section by default
-        window.onload = function() {
+        window.onload = function () {
             loadSection('welcome.html');
         };
     </script>
