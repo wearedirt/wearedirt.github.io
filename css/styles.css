@@ -10869,3 +10869,28 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     width: 100%;
     margin: 0;            /* force no centering */
 }
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid #0d6efd;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  width: 20px;
+  height: 20px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: 0;
+}
+
+.timeline-content {
+  padding-top: 1px;
+}
