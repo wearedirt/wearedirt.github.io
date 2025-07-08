@@ -62,13 +62,22 @@
 
     <!-- Load section content dynamically -->
     <script>
+        let sectionHistory = [];
+
         function loadSection(filename, anchor = '') {
+            const current = document.getElementById("dynamic-content").getAttribute("data-current");
+
+            if (current && current !== filename) {
+                sectionHistory.push(current);
+            }
+
             fetch(filename)
                 .then(response => response.text())
                 .then(html => {
-                    document.getElementById("dynamic-content").innerHTML = html;
+                    const container = document.getElementById("dynamic-content");
+                    container.innerHTML = html;
+                    container.setAttribute("data-current", filename);
 
-                    // Wait for DOM update
                     setTimeout(() => {
                         if (anchor) {
                             const el = document.querySelector(anchor);
@@ -78,12 +87,20 @@
                         } else {
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
-                    }, 100); // slight delay to ensure DOM is ready
+                    }, 100);
                 })
                 .catch(error => console.error('Error loading section:', error));
         }
 
-        // Load welcome section by default
+        function goBack() {
+            if (sectionHistory.length > 0) {
+                const prev = sectionHistory.pop();
+                loadSection(prev);
+            } else {
+                console.log("No previous section found.");
+            }
+        }
+
         window.onload = function () {
             loadSection('welcome.html');
         };
