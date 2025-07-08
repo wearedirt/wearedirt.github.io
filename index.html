@@ -1,646 +1,83 @@
+<!-- index.html (simplified and modular) -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Simple Sidebar - Start Bootstrap Template</title>
-    <!-- Favicon-->
+    <title>DIRT Research Manual</title>
     <link rel="icon" type="image/x-icon" href="assets/logo_d.ico" />
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
-
 <body>
     <div class="d-flex" id="wrapper">
-        <!-- Sidebar-->
+        <!-- Sidebar -->
         <div class="border-end bg-white d-none d-lg-block" id="sidebar-wrapper" style="width: 250px;">
             <div class="sidebar-heading border-bottom bg-light">
                 <img src="/assets/logo_dirt.png" alt="DIRT Logo" style="width: 200px; height: auto;">
             </div>
             <div class="list-group list-group-flush fs-5">
-                <div class="list-group list-group-flush fs-5">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#"
-                        onclick="showSection('section1')">Welcome</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#"
-                        onclick="showSection('section2')">SECTION 1: <br>Getting Started</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#"
-                        onclick="showSection('section3')">SECTION 2: <br>Using DIRT Watch</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#"
-                        onclick="showSection('section4')">SECTION 3: <br>DIRT Watch Accessories</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#"
-                        onclick="showSection('section5')">SECTION 4: <br>Using DIRT App</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#"
-                        onclick="showSection('section6')">SECTION 5: <br>Troubleshooting</a>
-                </div>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" onclick="loadSection('welcome.html')">Welcome</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" onclick="loadSection('section1.html')">SECTION 1: <br>Getting Started</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" onclick="loadSection('section2.html')">SECTION 2: <br>Bluetooth Setup</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" onclick="loadSection('section3.html')">SECTION 3: <br>Using DIRT Watch</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" onclick="loadSection('section4.html')">SECTION 4: <br>Using Watch Accessories</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" onclick="loadSection('section5.html')">SECTION 5: <br>Using DIRT App</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" onclick="loadSection('section6.html')">SECTION 6: <br>Troubleshooting</a>
             </div>
         </div>
 
-        <!-- Page content wrapper-->
+        <!-- Page content wrapper -->
         <div id="page-content-wrapper">
-            <!-- Top navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom d-lg-none">
                 <div class="container-fluid d-flex justify-content-between align-items-center">
-                    <!-- Hamburger menu on the left -->
-                    <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <!-- Logo on the right -->
                     <a class="navbar-brand order-2 ms-auto" href="#">
                         <img src="/assets/logo_dirt.png" alt="DIRT Logo" style="height: 50px;">
                     </a>
                 </div>
-
-                <!-- Collapsible nav items -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item active"><a class="nav-link" href="#!"
-                                onclick="showSection('section1')">Welcome</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!" onclick="showSection('section2')">SECTION 1:
-                                Getting Started</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!" onclick="showSection('section3')">SECTION 2:
-                                Using DIRT Watch</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!" onclick="showSection('section4')">SECTION 3:
-                                DIRT Watch Accesories</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!" onclick="showSection('section5')">SECTION 4:
-                                Using DIRT App</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!" onclick="showSection('section6')">SECTION 5:
-                                Troubleshooting</a></li>
-
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('welcome.html')">Welcome</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('section1.html')">SECTION 1: Getting Started</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('section2.html')">SECTION 2: Using DIRT Watch</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('section3.html')">SECTION 3: Using DIRT Watch</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('section4.html')">SECTION 4: Using Watch Accessories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('section5.html')">SECTION 5: Using DIRT App</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('section6.html')">SECTION 6: Troubleshooting</a></li>
+                    </ul>
                 </div>
             </nav>
 
-            <!-- Page content-->
+            <!-- Dynamic content area -->
             <div class="container-fluid">
-                <!-- Section: Welcome (shown by default) -->
-                <div id="section1" class="limited-width fs-5 content-section mt-5">
-                    <h1 class="mt-5">Welcome!</h1>
-                    <p>Thank you for being part of our research network!</p>
-                    <p>On this page, you will find everything you will need to know in order to get started using our
-                        hardware and software as you participate in our research network!</p>
-
-                    <h3>For new participants</h3>
-                    <p>If you are new to our research network, please start with <a href="#!"
-                            onclick="showSection('section2')">SECTION 1</a> to
-                        go over the package contents you have received from VGM. In addition, you must first follow the
-                        2 steps highlighted below to get started.</p>
-                    <div class="container py-6">
-                        <div class="row">
-                            <div class="col-md-20 mx-auto">
-
-                                <!-- Timeline wrapper -->
-                                <div class="timeline">
-
-                                    <!-- Step 1 -->
-                                    <div class="timeline-item d-flex">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content ps-4">
-                                            <h5>Step 1: Ensure your DIRT watch is fully charged</h5>
-                                            <p>See <a href="#!" onclick="showSection('section4')">SECTION 3</a> for more
-                                                information on how to charge your DIRT watch.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Step 2 -->
-                                    <div class="timeline-item d-flex">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content ps-4">
-                                            <h5>Step 2: Pair DIRT watch with your computer (do once only)</h5>
-                                            <p>See <a href="#!" onclick="showSection('section3')">SECTION 2</a> for more
-                                                information on how to pair the DIRT watch with
-                                                your computer.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Step 3 -->
-                                    <div class="timeline-item d-flex">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content ps-4">
-                                            <h5>Step 3: Install the DIRT App</h5>
-                                            <p>See <a href="#!" onclick="showSection('section5')">SECTION 4</a> for more
-                                                information on how to install the DIRT App on your
-                                                computer.</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>For all participants</h3>
-                    <p>To participate in any of our research studies, please follow the process highlighted below to
-                        get set up.</p>
-                    <div class="container py-6">
-                        <div class="row">
-                            <div class="col-md-20 mx-auto">
-
-                                <!-- Timeline wrapper -->
-                                <div class="timeline">
-
-                                    <!-- Step 1 -->
-                                    <div class="timeline-item d-flex">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content ps-4">
-                                            <h5>Step 1: Ensure your DIRT watch is fully charged</h5>
-                                            <p>See <a href="#!" onclick="showSection('section4')">SECTION 3</a> for more
-                                                information on how to charge your DIRT watch.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Step 2 -->
-                                    <div class="timeline-item d-flex">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content ps-4">
-                                            <h5>Step 2: Connect the DIRT watch to the data collection cable</h5>
-                                            <p>See <a href="#!" onclick="showSection('section3')">SECTION 2</a> for more
-                                                information.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Step 3 -->
-                                    <div class="timeline-item d-flex">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content ps-4">
-                                            <h5>Step 3: Apply the disposable sticky pads & connect the data collection
-                                                cable to the pads</h5>
-                                            <p>See <a href="#!" onclick="showSection('section3')">SECTION 2</a> for more
-                                                information.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Step 4 -->
-                                    <div class="timeline-item d-flex">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content ps-4">
-                                            <h5>Step 4: Use the DIRT App to participate in a study</h5>
-                                            <p>See <a href="#!" onclick="showSection('section5')">SECTION 4</a> for more
-                                                information.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section: Using DIRT Watch (hidden initially) -->
-                <div id="section2" class="limited-width fs-5 content-section mt-5" style="display: none;">
-                    <h1 class="mt-5">SECTION 1: Getting Started</h1>
-
-                    <h2 class="mt-5">Package contents</h1>
-                        <p>Below is an image of the package you have received when you came into VGM's office.
-                        </p>
-
-                        <div class="container my-7">
-                            <div class="row align-items-start">
-                                <!-- Image column -->
-                                <div class="col-md-6">
-                                    <img src="assets/contents_all.jpg" alt="Package contents"
-                                        class="img-fluid rounded border">
-                                </div>
-
-                                <!-- List column -->
-                                <div class="col-md-6">
-                                    <h5 class="mb-3">What's in the package:</h4>
-                                        <ul class="fs-5">
-                                            <li>1 DIRT Watch</li>
-                                            <li>1 Data Collection Cable</li>
-                                            <li>1 USB Charging Cable</li>
-                                            <li>1 USB Wall Adapter</li>
-                                            <li>2 Packs of Stickies</li>
-                                            <li>2 Reusable velcro pads</li>
-                                            </ol>
-                                </div>
-                            </div>
-
-                            <p></p>
-                            <div class="alert alert-warning" role="alert">
-                                ⚠️ <strong>Warning:</strong> If you are missing any of the items listed, please
-                                get in touch with us immediately!
-                            </div>
-                        </div>
-
-                        <h2 class="mt-5">DIRT Watch & Data Collection Cable</h1>
-                            <p>On the DIRT watch, you will notice 4 alpha-numerical ID. This 4-character ID is
-                                very important because this is your <b>Participant ID</b>. You will need to
-                                provide this ID every time you communicate with us moving forward. In the
-                                example below, you will see the DIRT watch and data collection cable. The
-                                Participant ID in this example is <b>9A45</b>. If the ID label is peeling or
-                                have fallen off, please let us know so we can take note of it.</p>
-                            <div class="container my-7">
-                                <div class="row align-items-start">
-                                    <div class="col-md-6">
-                                        <img src="assets/contents_watch_cable.jpg" alt="DIRT Watch & Cable"
-                                            class="img-fluid rounded border" width="600px">
-                                    </div>
-                                </div>
-
-                                <p></p>
-
-                                <div class="alert alert-info" role="alert">
-                                    💡 <strong>Note:</strong> To learn how to set up and use the DIRT watch,
-                                    please visit <a href="#!" onclick="showSection('section3')">SECTION 2</a>.
-                                </div>
-                            </div>
-
-                            <h2 class="mt-5">Data Collection Sticky Pads & Reusable Velcro Pads</h1>
-                                <p>You are provided with two packs of gel stickies to use when participating in
-                                    our studies. Each pack contains 6 stickies as shown below. If you are about
-                                    to run out of these sticky pads, please inform us so we can send you more.
-                                    If you fully run out, you can use the re-usable velcro pads (shown below) to
-                                    participate in our studies before receiving more sticky pads.</p>
-                                <div class="container my-7">
-                                    <div class="row align-items-start">
-                                        <div class="col-md-6">
-                                            <img src="assets/contents_stickies.jpg" alt="Data collection sticky pads"
-                                                class="img-fluid rounded border" width="600px">
-                                        </div>
-                                    </div>
-
-                                    <p></p>
-
-                                    <div class="alert alert-info" role="alert">
-                                        💡 <strong>Note:</strong> To learn more about how to use these sticky
-                                        pads, please visit <a href="#!" onclick="showSection('section3')">SECTION
-                                            2</a>.
-                                    </div>
-
-                                    <div class="row align-items-start">
-                                        <div class="col-md-6">
-                                            <img src="assets/contents_velcro.jpg"
-                                                alt="Data collection re-usable velcro pads"
-                                                class="img-fluid rounded border" width="600px">
-                                        </div>
-                                    </div>
-                                    <p></p>
-                                    <div class="alert alert-info" role="alert">
-                                        💡 <strong>Note:</strong> To learn more about how to use the reusable
-                                        velcro pads, please visit <a href="#!" onclick="showSection('section4')">SECTION
-                                            3</a>.
-                                    </div>
-                                </div>
-
-                                <h2 class="mt-5">USB Wall Adapter & Charging Cable</h1>
-                                    <p>You are provided a USB wall adapter and a micro-usb charging cable to use
-                                        with your DIRT watch. If you have lost or damaged the charging cable or
-                                        wall adapter, please let us know so they can be replaced.</p>
-                                    <div class="container my-7">
-                                        <div class="row align-items-start">
-                                            <div class="col-md-6">
-                                                <img src="assets/contents_charging.jpg" alt="USB wall adapter and cable"
-                                                    class="img-fluid rounded border" width="600px">
-                                            </div>
-                                        </div>
-
-                                        <p></p>
-
-                                        <div class="alert alert-info" role="alert">
-                                            💡 <strong>Note:</strong> To learn more about recharging the DIRT
-                                            watch, please visit <a href="#!" onclick="showSection('section4')">SECTION
-                                                3</a>.
-                                        </div>
-                                    </div>
-                                    <p></p>
-                </div>
-
-                <!-- Section: Using DIRT Watch (hidden initially) -->
-                <div id="section3" class="limited-width fs-5 content-section mt-5" style="display: none;">
-                    <h1 class="mt-5">SECTION 2: Using DIRT Watch</h1>
-                    <h2 class="mt-5">Turning on your computer's Bluetooth.</h2>
-                    <p> Before you can participate in any of the research studies, please ensure your computer's
-                        Bluetooth is turned on.</p>
-                    Press the ⊞ Windows key > Type and select "Bluetooth and other devices settings" > Ensure the toggle
-                    is "On".
-                    <div class="row align-items-start">
-                        <div class="col-md-6">
-                            <img src="assets/bluetooth_w11_1.png" alt="bt_11_1" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                            <img src="assets/bluetooth_w11_2.png" alt="bt_11_2" class="img-fluid rounded border"
-                                width="600px">
-                        </div>
-                    </div>
-
-                    <h2 class="mt-5">Connecting the DIRT watch to your computer using Bluetooth</h2>
-                    <div class="alert alert-warning" role="alert">
-                        ⚠️ <strong>Warning:</strong> You only need to do this ONCE. Please ensure your DIRT watch is fully charged before going through this step. If you have already done this
-                        before, please skip this process.
-                    </div>
-                    <ol>
-                        <li>Press the ⊞ Windows key > Type and select "Bluetooth and other devices settings"</li>
-                        <div class="row align-items-start">
-                            <div class="col-md-6">
-                                <img src="assets/bluetooth_w11_1.png" alt="bt_11_1" class="img-fluid rounded border"
-                                    width="600px">
-                            </div>
-                        </div>
-                        <p></p>
-                        <li>Select "Add device"</li>
-                        <div class="row align-items-start">
-                            <div class="col-md-6">
-                                <img src="assets/bluetooth_w11_3.png" alt="bt_11_3" class="img-fluid rounded border"
-                                    width="600px">
-                            </div>
-                        </div>
-                        <p></p>
-                        <li>Select the first option to add Bluetooth devices</li>
-                        <div class="row align-items-start">
-                            <div class="col-md-6">
-                                <img src="assets/bluetooth_w11_4.png" alt="bt_11_4" class="img-fluid rounded border"
-                                    width="600px">
-                            </div>
-                        </div>
-                        <p></p>
-                        <li>Select "Show all devices"</li>
-                        <div class="row align-items-start">
-                            <div class="col-md-6">
-                                <img src="assets/bluetooth_w11_5.png" alt="bt_11_5" class="img-fluid rounded border"
-                                    width="600px">
-                            </div>
-                        </div>
-                        <p></p>
-                        <li>Select the device that reads "Verisense-01-xxxxxxxx<b>XXXX</b>" where the bolded XXXX matches the ID on your DIRT watch. In this example, the ID is <b>E474</b>.</li>
-                        <div class="row align-items-start">
-                            <div class="col-md-6">
-                                <img src="assets/bluetooth_w11_6.png" alt="bt_11_6" class="img-fluid rounded border"
-                                    width="600px">
-                            </div>
-                        </div>
-                        <p></p>
-                        <li>Enter in "123456" as your pin and press "Connect".</li>
-                        <div class="row align-items-start">
-                            <div class="col-md-6">
-                                <img src="assets/bluetooth_w11_7.png" alt="bt_11_7" class="img-fluid rounded border"
-                                    width="600px">
-                            </div>
-                        </div>
-                        <p></p>
-                        <li>You have now connected your DIRT watch to your computer's Bluetooth devices! Press "Done" to finish.</li>
-                        <div class="row align-items-start">
-                            <div class="col-md-6">
-                                <img src="assets/bluetooth_w11_8.png" alt="bt_11_8" class="img-fluid rounded border"
-                                    width="600px">
-                            </div>
-                        </div>
-                        <p></p>
-                    </ol>
-
-                    <h2 class="mt-5">Connecting the data collection cable</h2>
-                    <p>The data collection cable must be connected to the watch as illustrated
-                        below. Please note that on the cable, you will see a "B" on the plug end
-                        of the cable. The "B" side of the cable should face upward when plugging
-                        it into the watch as shown below (same side as the participant ID label
-                        on the watch).</p>
-                    <div class="row align-items-start">
-                        <div class="col-md-6">
-                            <img src="assets/data_cable_1.jpg" alt="Data cable 1" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                            <img src="assets/data_cable_2.jpg" alt="Data cable connected 1"
-                                class="img-fluid rounded border" width="600px">
-                            <p></p>
-                            <img src="assets/data_cable_3.jpg" alt="Data cable connected 2"
-                                class="img-fluid rounded border" width="600px">
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <p></p>
-                    <div class="alert alert-warning" role="alert">
-                        ⚠️ <strong>Warning:</strong> <b>Please be careful</b> when you are
-                        plugging and unplugging this cable into the watch, as well as onto the
-                        data collection pads. The cable is fragile! If the cable is ever
-                        damaged, please let us know <b>immediately</b>!
-                    </div>
-
-                    <h2 class="mt-5">Using the disposable sticky pads for data collection</h2>
-
-                    <p>In each pack of sticky pads, you will see 6 disposable pads. Each
-                        time you participate in a study, you will only need 2 sticky pads.
-                        To use these sticky pads, please apply them to your index and middle
-                        fingers as illustrated below.</p>
-                    <div class="row align-items-start">
-                        <div class="col-md-6">
-                            <img src="assets/stickies_1.jpg" alt="Sticky pads 1" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                            <img src="assets/stickies_2.jpg" alt="Sticky pads 2" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                            <img src="assets/stickies_3.jpg" alt="Sticky pads 3" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <p></p>
-                    <div class="alert alert-info" role="alert">
-                        💡 <strong>Note:</strong> If your hand is sweaty and the sticky pads
-                        fall off, you can always use another pair.
-                    </div>
-
-                    <p>Once you have applied the sticky pads onto your fingers, you can
-                        attach the data collection cable as illustrated below. At this
-                        point, you are ready to participate in a study!</p>
-                    <div class="row align-items-start">
-                        <div class="col-md-6">
-                            <img src="assets/stickies_4.jpg" alt="Sticky pads 4" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                            <img src="assets/stickies_5.jpg" alt="Sticky pads 5" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                            <img src="assets/stickies_6.jpg" alt="Sticky pads 6" class="img-fluid rounded border"
-                                width="600px">
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <p></p>
-                    <div class="alert alert-info" role="alert">
-                        💡 <strong>Note:</strong> After you are done with a study, please
-                        carefully remove the cable from the sticky pads and you can throw
-                        away the sticky pads. <b>Please do not reuse the sticky pads!</b>
-                    </div>
-                    <div class="alert alert-info" role="alert">
-                        💡 <strong>Note:</strong> If you have run out of the disposable
-                        sticky pads, please let us know to get more. You can also use the
-                        reuseable velcro pads if needed. To learn more about the velcro
-                        pads, please visit <a href="#!" onclick="showSection('section4')">SECTION
-                            3</a>.
-                    </div>
-                </div>
-
-                <!-- Section: DIRT Watch Accessories (hidden initially) -->
-                <div id="section4" class="limited-width fs-5 content-section mt-5" style="display: none;">
-                    <h1 class="mt-5">SECTION 3: DIRT Watch Accessories</h1>
-
-                    <h2 class="mt-5">Charging your DIRT watch</h1>
-                        <p>To charge your DIRT watch, please only use the included micro-usb cable and USB wall
-                            adapter.</p>
-                        <p>You should charge your DIRT watch <b>at least 4 hours before participating in a
-                                research study</b>. You will be given prior notice via the Telegram group when a
-                            new research study will be released. Please use that information to determine when
-                            you should charge your device so you can participate successfully.</p>
-
-                        <p>When the device is charging, you will see a red LED light turn on like in the image
-                            below.</p>
-                        <div class="container my-7">
-                            <div class="row align-items-start">
-                                <div class="col-md-6">
-                                    <img src="assets/device_charging_1.jpg" alt="Device charging 1"
-                                        class="img-fluid rounded border" width="600px">
-                                    <p></p>
-                                </div>
-                            </div>
-
-                            <p></p>
-                        </div>
-
-                        <p>When your DIRT watch is fully charged, you will see a green LED light turn on. When
-                            this happens, the device is ready to use!</p>
-                        <div class="container my-7">
-                            <div class="row align-items-start">
-                                <div class="col-md-6">
-                                    <img src="assets/device_charging_2.jpg" alt="Device charging 2"
-                                        class="img-fluid rounded border" width="600px">
-                                    <p></p>
-                                </div>
-                            </div>
-
-                            <p></p>
-                            <div class="alert alert-info" role="alert">
-                                💡 <strong>Note:</strong> For best performance, please ensure your DIRT watch is
-                                fully charged before participating in a study.
-                            </div>
-                        </div>
-
-                        <h2 class="mt-5">Using the reusable velcro pads during data collection</h1>
-                            <p>When you have run out of the dispoable sticky pads, you can use the re-usable
-                                velcro pads before receiving more sticky pads from us. However, if you have
-                                slimmer fingers, the reusable pads must first be trimmed down to fit your
-                                fingers before using for the first time.</p>
-
-                            <h4 class="mt-4">Preparing the velcro pads</h1>
-                                <p>In the images below, we illustrate how to cut down the velcro pads to size
-                                    when it is too big. In our example, we only needed to cut off a small piece
-                                    of the velcro from one side to make it fit. Once cut to size, the velcro pad
-                                    will fit snuggly onto your finger.</p>
-                                <div class="container my-7">
-                                    <div class="row align-items-start">
-                                        <div class="col-md-6">
-                                            <img src="assets/velcro_cut_1.jpg" alt="Trimming vecro pad 1"
-                                                class="img-fluid rounded border" width="600px">
-                                            <p></p>
-                                            <img src="assets/velcro_cut_2.jpg" alt="Trimming vecro pad 2"
-                                                class="img-fluid rounded border" width="600px">
-                                            <p></p>
-                                        </div>
-                                    </div>
-
-                                    <p></p>
-
-                                    <div class="alert alert-warning" role="alert">
-                                        ⚠️ <strong>Warning:</strong> When trimming down the velcro pads, please
-                                        do so sparingly so that you don't make it too small! They are
-                                        <b>reusable</b> so please do not throw them away!
-                                    </div>
-                                </div>
-
-                                <h4 class="mt-4">Placement of the velcro pads</h1>
-
-                                    <p>Once you have trimmed the velcro pads to fit your finger, you can wrap
-                                        them around your fingers as illustrated below.</p>
-                                    <p>Similarly to the stickies, please make sure the metal part of the velcro
-                                        pads are aligned in the middle of your finger and not obstructed by
-                                        anything behind it.In the image below, we illustrate that you should aim
-                                        to align the two red circles when putting on the reusable velcro pad.
-                                    </p>
-
-                                    <div class="container my-7">
-                                        <div class="row align-items-start">
-                                            <div class="col-md-6">
-                                                <img src="assets/velcro_placement_1.jpg" alt="Velcro pad placement"
-                                                    class="img-fluid rounded border" width="600px">
-                                                <p></p>
-                                                <img src="assets/velcro_placement_2.jpg" alt="Velcro pad placement 2"
-                                                    class="img-fluid rounded border" width="600px">
-                                            </div>
-                                        </div>
-
-                                        <p></p>
-                                    </div>
-
-                                    <p>Once you have both velcro pads wrapped around your fingers, you can
-                                        connect the DIRT watch to use when participating in a study.</p>
-                                    <div class="container my-7">
-                                        <div class="row align-items-start">
-                                            <div class="col-md-6">
-                                                <img src="assets/velcro_placement_3.jpg" alt="Velcro pad placement 3"
-                                                    class="img-fluid rounded border" width="600px">
-                                                <p></p>
-                                            </div>
-                                        </div>
-
-                                        <p></p>
-                                    </div>
-
-
-                                    <div class="alert alert-warning" role="alert">
-                                        ⚠️ <strong>Warning:</strong> If the velcro pads is too big for your
-                                        fingers, the overlap could potentially obstruct the metal pad from
-                                        making contact with your finger. As such, please make sure to trim down
-                                        the velcro pad before using.
-                                    </div>
-
-                </div>
-
-                <!-- Section: Using DIRT Software (hidden initially) -->
-                <div id="section5" class="limited-width fs-5 content-section mt-5" style="display: none;">
-                    <h1 class="mt-5">SECTION 4: Using DIRT Software</h1>
-                    <p>This is the content for SECTION 3. Add your instructions or details here.</p>
-                </div>
-
-                <!-- Section: Troubleshooting (hidden initially) -->
-                <div id="section6" class="limited-width fs-5 content-section mt-5" style="display: none;">
-                    <h1 class="mt-5">SECTION 5: Troubleshooting</h1>
-                    <p>This is the content for SECTION 4. Add your troubleshooting steps here.</p>
+                <div id="dynamic-content" class="limited-width fs-5 mt-5">
+                    <!-- Section content will be loaded here -->
                 </div>
             </div>
-
         </div>
     </div>
-    </div>
-    <!-- Bootstrap core JS-->
+
+    <!-- Bootstrap core JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
 
+    <!-- Load section content dynamically -->
     <script>
-        function showSection(sectionId) {
-            // Hide all content sections
-            document.querySelectorAll('.content-section').forEach((section) => {
-                section.style.display = 'none';
-            });
-
-            // Show the selected section
-            const target = document.getElementById(sectionId);
-            if (target) {
-                target.style.display = 'block';
-            }
-
-            // Scroll to top of the page
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function loadSection(filename) {
+            fetch(filename)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("dynamic-content").innerHTML = html;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                })
+                .catch(error => console.error('Error loading section:', error));
         }
+
+        // Load welcome section by default
+        window.onload = function() {
+            loadSection('welcome.html');
+        };
     </script>
 </body>
-
 </html>
