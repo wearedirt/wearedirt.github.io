@@ -24,3 +24,25 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+async function checkBluetooth() {
+    const idInput = document.getElementById('participantId').value.trim().toUpperCase();
+    const targetName = `Verisense-01-22011801${idInput}`;
+    const resultEl = document.getElementById('bt-result');
+
+    let status = "No";
+    try {
+        const device = await navigator.bluetooth.requestDevice({
+            filters: [{ name: targetName }]
+        });
+        status = "Yes";
+        resultEl.textContent = `✅ Device "${targetName}" is paired.`;
+    } catch (error) {
+        resultEl.textContent = `❌ Device not found or user cancelled.`;
+    }
+
+    // Fill hidden form fields
+    document.getElementById('btId').value = idInput;
+    document.getElementById('btStatus').value = status;
+    document.getElementById('btDate').value = new Date().toISOString();
+}

@@ -1,0 +1,22 @@
+<div id="bluetooth-check" class="limited-width fs-5 content-section mt-5">
+    <h2>Bluetooth Device Check</h2>
+    <div class="alert alert-warning" role="alert">
+        ⚠️ <strong>Note:</strong> This verification tool only works on Chrome, Edge, or Opera browser. You need to use this tool on the machine you have paired your device with.
+    </div>
+
+    <form id="bt-form">
+        <label for="participantId">Enter 4-character ID:</label>
+        <input type="text" id="participantId" name="participantId" maxlength="4" pattern="[A-Za-z0-9]{4}" required>
+        <button type="button" onclick="checkBluetooth()">Check Bluetooth</button>
+    </form>
+    <p id="bt-result"></p>
+
+    <form id="submit-form" method="POST" action="https://formspree.io/f/xvgrevkd">
+        <input type="hidden" id="btStatus" name="bluetoothStatus">
+        <input type="hidden" id="btDate" name="date">
+        <input type="hidden" id="btId" name="participantId">
+        <button type="submit">Submit Results</button>
+    </form>
+
+    <script src="js/script.js"></script>
+</div>
