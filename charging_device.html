@@ -1,39 +1,53 @@
 <div id="charging_device" class="limited-width fs-5 content-section mt-5">
-    <a href="#" onclick="goBack()" class="btn btn-outline-secondary mt-4">← Go Back</a>
-
     <h1 class="mt-5">SECTION 2: Charging DIRT Watch</h1>
     <p></p>
 
     <h3>IMPORTANT:</h3>
-    <p>To charge your DIRT watch, <i>only use</i> the included micro-usb cable and USB wall adapter.</p>
-    <ul>
-        <li>Please charge your device for <b>at least 4 hours</b> before setting up your DIRT watch for the first time.</li>
-        <li>Please charge your device for <b>at least 4 hours</b> before participating in any research study. You will be given prior notice by your recruiter when a new research study will be released.</li>
-    </ul>
-
-    <div class="alert alert-info" role="alert">
-        💡 <strong>Note:</strong> For best performance, please ensure your DIRT watch is always charged before using it. It is <b>very important</b> that your DIRT watch is charged otherwise certain functionalities
-        will not work with our DIRT App! We recommend that you fully charge your watch prior to using it if you are experiencing any issues.
-    </div>
+    <p>To charge your DIRT watch, <i>only use</i> the included micro-USB cable and USB wall adapter. Please make sure you have charged your device for <b>at least 4 hours</b> before using it. 
 
     <div class="alert alert-warning" role="alert">
-        ⚠️ <strong>Warning:</strong> Whenever you are not participating in a study, please store your DIRT watch in a safe place, but do not leave it plugged into the charger as this may damage the battery.
+        ⚠️ <strong>Warning:</strong> Whenever you are not participating in a study, please store your DIRT watch in a safe place, but do not leave it plugged into the charger or your computer as this may damage the battery.
     </div>
 
     <h3>How to charge:</h3>
 
     <p>To charge the DIRT watch, plug in the micro-usb charging cable to the watch and the USB-A to the wall adapter. If you have not done so, you will need to unplug the white data collection cable from the watch
-        before you can plug in the charging cable. When the device is charging, you will see a red LED light turn on like in the image below.</p>
-    <div class="container my-7">
-        <div class="row align-items-start">
+        before you can plug in the charging cable.</p>
+
+    <p>When the device is charging, you will see a red LED light turn on and remains lit while charging. Please ensure that
+        the LED light is <b>solidly lit</b>. If you plug your watch in and the LED light is rapidly flashing
+        as shown in the video below, then that means your device is <b>NOT</b> charging correctly. You will need to unplug the device and re-plug it back in
+        until you see a SOLID red light. If you cannot get your device to charge correctly, please reach out to your panel management team immediately.</p>
+    <div class="container my-4">
+        <div class="row g-4">
+            <!-- Charging correctly -->
             <div class="col-md-6">
-                <img src="assets/device_charging_1.jpg" alt="Device charging 1" class="img-fluid rounded border"
-                    width="600px">
-                <p></p>
+                <div class="border rounded p-3 h-100">
+                    <h5 class="mb-3 text-success">✅ Charging correctly (solid red LED)</h5>
+    
+                    <div style="width: 100%; max-width: 600px; height: 500px; overflow: hidden; margin-left: 0;">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="assets/charging_good.mov" type="video/mp4">
+                            The LED indicator behaves as expected while the device is charging.
+                        </video>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Charging error -->
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100">
+                    <h5 class="mb-3 text-danger">❌ Charging error (rapidly flashing red LED)</h5>
+    
+                    <div style="width: 100%; max-width: 600px; height: 500px; overflow: hidden; margin-left: 0;">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="assets/charging_bad.mov" type="video/mp4">
+                            This behavior indicates the device is not charging correctly.
+                        </video>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <p></p>
     </div>
 
     <p>When your DIRT watch is fully charged, you will see a green LED light turn on like the image below. This may take between 6-8 hours if your watch was completely out of battery. Typically,
@@ -51,8 +65,8 @@
         <p></p>
     </div>
 
-    <p>When you unplug a charged device, you will see a flashing red light similar to the video below. This flashing indicates that your watch has some amount of battery in it. 
-        However, to know the actual battery level (how much battery you have), please use our DIRT App.
+    <p>When you unplug a charged device, you will see a flashing red light similar to the video below. This flashing indicates that your watch is awake and has some amount of battery in it. 
+        However, to know the actual battery level (how much battery you have), please connect your watch to the DIRT App.
     </p>
     <div class="container">
         <div class="row justify-content-left">
@@ -65,5 +79,6 @@
         </div>
         <p></p>
     </div>
+    <br>
 
 </div>

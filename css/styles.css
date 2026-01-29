@@ -10894,3 +10894,21 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 .timeline-content {
   padding-top: 1px;
 }
+
+.spp-stack {
+  grid-template-columns: 1fr !important;
+}
+
+.spp-stack .spp-img {
+  width: 75%;
+  max-width: 100%;
+}
+
+.wiz-stack {
+  grid-template-columns: 1fr !important;
+}
+
+.wiz-stack .wiz-img {
+  width: 75%;
+  max-width: 100%;
+}
