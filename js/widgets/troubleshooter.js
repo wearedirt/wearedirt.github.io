@@ -26,8 +26,8 @@
           choices: [
             { label: "I cannot pair my device with my computer.", next: "r2" },
             { label: "My DIRT watch is not being detected by the DIRT App.", next: "r_watch_cannotdetect" },
-            { label: "My device is not charging.", next: "r1" },
-            { label: "My device is dying really quickly even after charging for a while.", next: "r1" },
+            { label: "My device is not charging or dying quickly after charging for a while.", next: "r_notcharging" },
+            { label: "I am getting the error ''Error reading device status, please try again''", next: "r_errorstatus" },
           ],
         },
         dirt_app: {
@@ -39,31 +39,18 @@
             { label: "The DIRT watch cannot be detected by the DIRT app.", next: "r_watch_cannotdetect" },
             { label: "I cannot press the ''Load Study'' button.", next: "r_loadstudy_inactive" },
             { label: "The DIRT App froze during a study.", next: "r_appfroze_midstudy" },
+            { label: "Pop up error regarding: ''Win_ble_server.exe - System error''", next: "r_winble" },
           ],
         },
-        r1: {
+        r_notcharging: {
           type: "result",
-          title: "Basics look OK",
-          text: "Continue setup. If the app still can’t connect, toggle phone Bluetooth off/on and retry.",
+          title: "Watch charging issue",
+          text: "Please refer to Section 2 to look at instructions on how to charge your DIRT watch. Please be attentive to the LED light behind the watch, which will let you know whether or not your watch is receiving charge. The LED light should be a SOLID red light and not rapidly blinking red when you plug in your device to charge. PLEASE NOTE: only the DIRT App can provide the true battery level of your DIRT Watch. The Windows bluetooth manager will not report a correct battery level (as many will say 0%). If your device continues to have charging issues, please reach out to your panel management team and let them know ASAP. ",
         },
         r2: {
           type: "result",
-          title: "Not showing in Bluetooth",
-          text: "Try: (1) restart phone Bluetooth, (2) move closer, (3) restart phone, (4) charge 30 minutes and retry.",
-        },
-        r3: {
-          type: "result",
-          title: "Charged but still won’t power on",
-          text: "Try a different USB adapter/outlet. If no response, collect device label + participant ID and escalate.",
-          actions: [
-            {
-              label: "Copy support note template",
-              onClick: () =>
-                copyText(
-                  "Support request:\n- Issue: watch will not power on after 30+ minutes charging\n- Participant ID:\n- Steps tried: different outlet/adapter, reseated charger\n- Date/time:"
-                ),
-            },
-          ],
+          title: "Unable to pair with Bluetooth",
+          text: "Please go through Windows Update to ensure your Windows System is up to date, including your Bluetooth driver. After you have completed such updates, please try pairing your DIRT watch again using the instructions provided in Section 3.",
         },
         r_pairing_issue: {
           type: "result",
@@ -89,7 +76,17 @@
           type: "result",
           title: "DIRT App froze during a study",
           text: "We apologize for the inconvenience. If the DIRT App froze during data upload, please quit out and email your panel administator to let them know that this had happened. You will still be credited for your participation when we can confirm of such occurrence. However, if \
-                the DIRT App froze during any part of the study, please quit out and restart the study.",
+                the DIRT App froze during any part of the study, please quit out and restart the study. PLEASE NOTE: when running a study, close out of all other applications and internet browsers as these may interfere and cause the DIRT App to crash.",
+        },
+        r_winble: {
+          type: "result",
+          title: "I got a popup that says: ''Win_ble_server.exe - System error'' or a similar error",
+          text: "1) Uninstall the Dirt app. 2) Go to the following link (https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/) and press the blue Download button on the left-hand side of the page. Save the .zip file to your desktop and right-click and unzip or extract the file. In the new unzipped folder, launch ''install_all.bat.'' Go through all the installations to repair your C++ packages. 3) Reinstall the Dirt app.",
+        },
+        r_errorstatus: {
+          type: "result",
+          title: "I am getting the error ''Error reading device status, please try again''",
+          text: "Please reach out to your panel management team and ask them to show you how to remove the battery from your device to do a hard reset. This should help resolve this issue.",
         },
         contact_recruit: {
           type: "result",
